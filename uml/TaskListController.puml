@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TaskListController {
+-Stage stage
+-Scene scene
+-Parent root
++Button help
++Label welcomeText
++TableView<Task> taskTable
++TableColumn<Task,String> descriptionColumn
++TableColumn<Task,String> dateColumn
++TableColumn<Task,String> completionColumn
++Button clearTasks
++Button addButton
++DatePicker datePicker
++TextField taskText
++Pane goBack
++MenuItem saveIndividualList
++MenuItem loadIndividualList
++Button removeTask
++MenuItem allTasksShown
++MenuItem completedTasksShown
++MenuItem uncompletedTasksShown
++ObservableList<Task> list
++FileChooser fileChooser
+
++initialize(URL location, ResourceBundle resources)
++helpScreenButtonClicked(ActionEvent actionEvent)
++saveButtonClicked(ActionEvent actionEvent)
++checkSave(File fileSave)
++loadButtonClicked(ActionEvent actionEvent)
++checkProperLoad(ObservableList<Task> check)
++addTaskButtonClicked(ActionEvent actionEvent)
++checkValuesAdded(String description, String dueDate)
++removeTaskButtonClicked(ActionEvent actionEvent)
++removedTask(ObservableList<Task> removed)
++clearTasksButtonClicked(ActionEvent actionEvent)
++checkIfEmpty(ObservableList<Task> tester)
++editTaskDescription(TableColumn.CellEditEvent<Task, String> taskStringCellEditEvent)
++simulateEditDesc(String oldValue, String newValue)
++editDate(TableColumn.CellEditEvent<Task, String> taskLocalDateCellEditEvent)
++simulateEditDate(String oldValue, String newValue)
++allTasksDisplayedChosen(ActionEvent actionEvent)
++completedTasksDisplayedChosen(ActionEvent actionEvent)
++uncompletedTasksDisplayedChosen(ActionEvent actionEvent)
++removeListButtonClicked(ActionEvent actionEvent)
+}
+
+@enduml

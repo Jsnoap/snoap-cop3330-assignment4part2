@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Task {
+-SimpleStringProperty description
+-SimpleStringProperty date
+-CheckBox completion
++getDescription()
++setDescription(String description)
++getDate()
++setDate(String date)
++CheckBox getCompletion()
++setCompletion(CheckBox completion)
+}
+
+@enduml
